@@ -1,5 +1,5 @@
 /* Adapted from Keunhong Park's academic website design, CC BY-SA 4.0. */
-.service .review-venues{margin:15px 0 0;padding-left:20px;color:#404040;line-height:1.55}.service .review-venues li+li{margin-top:7px}
+.service .review-venues,.service .recognition-list{margin:15px 0 0;padding-left:20px;color:#404040;line-height:1.55}.service .review-venues li+li,.service .recognition-list li+li{margin-top:7px}
 [hidden]{display:none!important}
 .publication-image{position:relative;padding:0;cursor:zoom-in;font:inherit;color:#555}
 .image-hint{position:absolute;bottom:7px;right:7px;background:rgba(255,255,255,.95);border:1px solid #e4e4df;border-radius:3px;padding:2px 7px;font:400 .65rem/1.5 'Source Sans 3',system-ui,sans-serif}
