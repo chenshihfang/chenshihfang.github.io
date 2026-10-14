@@ -18,7 +18,7 @@ person={
  'jobTitle':'Computer Vision and Machine Learning Researcher and Engineer',
  'description':'Ph.D. in Computer Science, researching robust and adaptive visual perception, multimodal learning, spatial intelligence, and vision foundation models.',
  'alumniOf':[{'@type':'CollegeOrUniversity','name':n} for n in ['National Yang Ming Chiao Tung University','Yuan Ze University','Chaoyang University of Technology']],
- 'knowsAbout':['Computer vision','Machine learning','Multimodal learning','Spatial intelligence','Video understanding','Vision foundation models','Self-supervised learning','Parameter-efficient fine-tuning','Test-time adaptation','Online model editing','Visual prompting','Object tracking','Point tracking','Industrial computer vision'],
+ 'knowsAbout':["Computer Vision","Machine Learning","Visual & Video Perception","Multimodal Learning","Representation Learning","Self-Supervised Learning","Parameter-Efficient Fine-Tuning (PEFT)","Foundation Models","Post-Training","Test-Time Adaptation","Visual Tracking","Spatial Intelligence","Model Architecture Design","Vision Foundation Models","Model Editing","Knowledge Distillation","Distributed Training","DP/DDP","DeepSpeed","Activation Checkpointing","Mixed-Precision Training","GPU Memory Optimization","Performance Profiling","Model Benchmarking","PyTorch","NumPy","OpenCV","Python","C++","C","Bash","Linux","Git","GPU Cluster Administration"],
  'sameAs':['https://www.linkedin.com/in/shihfangchen/','https://github.com/chenshihfang','https://scholar.google.com/citations?user=X8uMo8EAAAAJ','https://orcid.org/0000-0002-8438-400X','https://www.cake.me/resumes/shih-fang-chen']
 }
 pages=[
