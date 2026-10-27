@@ -24,7 +24,7 @@ person={
 pages=[
  ('index.html','', 'Shih-Fang Chen | Computer Vision & Machine Learning Researcher',
   'Shih-Fang Chen, Ph.D. Computer vision and machine learning research in multimodal learning, spatial intelligence, object tracking, and test-time adaptation. GOT-Edit, GOT-JEPA, and PiVOT.'),
- ('cv/index.html','cv/','CV | Shih-Fang Chen — Computer Vision & Machine Learning',
+ ('cv/index.html','cv/','Curriculum Vitae | Shih-Fang Chen — Computer Vision & Machine Learning',
   'Shih-Fang Chen’s curriculum vitae: NYCU Ph.D., computer vision and multimodal learning research, ICLR 2026, IEEE TCSVT and TMM, industrial vision systems, and GPU infrastructure.')
 ]
 for filename,suffix,title,description in pages:
