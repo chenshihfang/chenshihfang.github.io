@@ -124,7 +124,6 @@
     <symbol id="icon-scholar" viewBox="0 0 24 24"><path d="m2 8 10-6 10 6-10 6zM6 11v6c4 3 8 3 12 0v-6M22 8v8"/></symbol>
     <symbol id="icon-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.1M11 17v-7M11 13a3 3 0 0 1 6 0v4"/></symbol>
     <symbol id="icon-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><ellipse cx="12" cy="12" rx="4" ry="10"/><path d="M2 12h20M4 6h16M4 18h16"/></symbol>
-    <symbol id="icon-play" viewBox="0 0 24 24"><path d="m8 4 13 8-13 8z"/></symbol>
     <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
   </svg>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -160,47 +159,26 @@
       <p>Multimodal Learning, Visual/Video Perception, Video Understanding, Vision-Language Models, Spatial Intelligence, Representation Learning, Self-Supervised Learning, Foundation Model Adaptation, Visual Tracking, Model Training and Optimization, Test-Time Adaptation</p>
     </section>
 
+    <section id="highlights" class="highlights section" aria-labelledby="highlights-title">
+      <div class="container">
+        <h2 id="highlights-title">Doctoral Research</h2>
+        <div class="doctoral-research">
+          <a class="slides-cover" href="#research-talk" aria-label="Browse my research slides on this page">
+            <img src="assets/research-slides.webp" alt="Doctoral dissertation: Rethinking Generic Object Tracking Toward Human-Level Perceptual Intelligence" width="1000" height="562" loading="lazy">
+            <span class="cover-action"><svg class="icon"><use href="#icon-file"/></svg>Browse slides</span>
+          </a>
+          <div class="doctoral-research-description">
+            <p>Human visual perception maintains a continuous and coherent understanding of the world by integrating observations with accumulated experience, spatial geometry, and semantic context. This enables robust adaptation to dynamic targets and environments while preserving visual continuity.</p>
+            <p>Generic Object Tracking (GOT) aims to achieve similar capabilities by continuously localizing an arbitrary target given only its bounding box in the first frame. However, unpredictable changes, severe deformation, complex distractors, and unseen categories challenge generalization and online adaptation, limiting tracking reliability.</p>
+            <p>My doctoral research addresses these challenges through a series of methods that enhance target discrimination, robust adaptation, and geometric reasoning, bringing machine visual tracking closer to human visual perception.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="container section service" aria-labelledby="service-title">
       <h2 id="service-title">Peer Review Service</h2>
       <p>Reviewed 50+ manuscripts for the following venues:</p><ul class="review-venues"><li>IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</li><li>IEEE Transactions on Multimedia (TMM)</li><li>IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)</li><li>International Conference on Learning Representations (ICLR)</li><li>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</li></ul>
-    </section>
-
-    <section id="highlights" class="highlights section" aria-labelledby="highlights-title">
-      <div class="container">
-        <h2 id="highlights-title">Highlights</h2>
-        <div class="highlight-grid">
-          <article class="highlight-card">
-            <div class="demo-stage">
-              <img class="demo-poster" src="assets/got-edit.webp" alt="GOT-Edit combines visual semantics and 3D geometry for object tracking" width="1400" height="519" loading="lazy">
-              <video id="tracking-demo" class="demo-video" controls muted playsinline loop preload="none" aria-label="GOT-Edit qualitative tracking demonstration" hidden></video>
-              <button id="play-demo" class="play-demo" type="button"><svg class="icon"><use href="#icon-play"/></svg>Watch demo</button>
-            </div>
-            <div class="highlight-copy">
-              <div class="eyebrow">ICLR 2026</div>
-              <h3><a href="https://chenshihfang.github.io/GOT-EDIT/" target="_blank" rel="noopener">GOT-Edit: Geometry-Aware Tracking</a></h3>
-              <p>Online model editing brings 3D geometry into adaptive 2D video perception.</p>
-              <div class="demo-switch" role="group" aria-label="Select tracking demonstration">
-                <button type="button" class="demo-choice" data-demo="A" aria-pressed="true">Demo A</button>
-                <button type="button" class="demo-choice" data-demo="B" aria-pressed="false">Demo B</button>
-                <a href="https://chenshihfang.github.io/GOT-EDIT/" target="_blank" rel="noopener">Project <svg class="icon"><use href="#icon-arrow"/></svg></a>
-              </div>
-              <p id="demo-status" class="media-status" role="status"></p>
-            </div>
-          </article>
-          <article class="highlight-card">
-            <a class="slides-cover" href="#research-talk" aria-label="Browse my research slides on this page">
-              <img src="assets/research-slides.webp" alt="Doctoral dissertation: Rethinking Generic Object Tracking Toward Human-Level Perceptual Intelligence" width="1000" height="562" loading="lazy">
-              <span class="cover-action"><svg class="icon"><use href="#icon-file"/></svg>Browse slides</span>
-            </a>
-            <div class="highlight-copy">
-              <div class="eyebrow">Ph.D. Research · 2026</div>
-              <h3><a href="#research-talk">Toward Human-Level Perceptual Intelligence</a></h3>
-              <p>My research on visual prompting, model-predictive learning, and cross-modal adaptation.</p>
-              <a class="text-action" href="#research-talk">Read the slides below <span aria-hidden="true">↓</span></a>
-            </div>
-          </article>
-        </div>
-      </div>
     </section>
 
     <section id="publications" class="container section" aria-labelledby="publications-title">
@@ -255,7 +233,7 @@
       <article class="publication">
         <div style="grid-column: 1 / -1">
           <h3>Intelligent Logistics Data Collection System</h3>
-          <p class="venue">Taiwan patents (<strong>2021, 2023</strong>)</p>
+          <p class="venue">Taiwan patents (<strong>2022, 2023</strong>) · Invention application publication and grant</p>
           <p class="paper-description">Developed and deployed an <strong>industrial computer vision system</strong> using image restoration and semantic segmentation for stacked-substrate measurement, <strong>automating manual inspection and reducing annual operating costs</strong>.</p>
           <div class="paper-links">
             <a href="https://patents.google.com/patent/TWI802843B/zh" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-file"/></svg>Invention Patent TWI802843B (2023)</a>
@@ -292,7 +270,6 @@
         <div class="experience-date">2018–2020</div>
         <div><h3>Computer Vision Researcher and Engineer (M.S.)</h3><p class="venue">Yuan Ze University · Master's industry–academia research</p><ul><li>Owned end-to-end vision system development in an industry–academia collaboration, translating industry partner requirements into a research prototype and production-ready system</li><li>Designed and deployed a production vision system for PCB stacked-substrate counting, automating manual inspection, reducing annual operating costs, and contributing to patents</li></ul></div>
       </div>
-      <div class="additional-experience"><p><span class="detail-label">Infrastructure.</span> Administered 10 GPU servers supporting 30 users at the Vision and Learning Lab (VLLAB), NYCU and Academia Sinica (2021–2026).</p></div>
     </section>
 
     <section id="technical-skills" class="container section" aria-labelledby="technical-skills-title">
