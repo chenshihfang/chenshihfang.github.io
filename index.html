@@ -156,7 +156,7 @@
 
     <section id="research-areas" class="container section" aria-labelledby="research-areas-title">
       <h2 id="research-areas-title">Research Interests</h2>
-      <p>Multimodal Learning, Visual/Video Perception, Video Understanding, Vision-Language Models (VLMs) and Vision-Language-Action Models (VLAs), Spatial Intelligence, Representation Learning, Self-Supervised Learning, Foundation Model Adaptation, Video Foundation Models, Model Training and Optimization, Test-Time Adaptation, World Models, Physical AI, Visual Tracking</p>
+      <p>Visual/Video Perception, Multimodal AI, Video Understanding, Spatial Intelligence, Foundation Model Adaptation, Model Training and Optimization, Test-Time Adaptation, World Models</p>
     </section>
 
     <section id="highlights" class="highlights section" aria-labelledby="highlights-title">
@@ -272,7 +272,20 @@
       <h2 id="experience-title">Work Experience (Research &amp; Engineering)</h2>
       <div class="experience-row">
         <div class="experience-date">2021–2026</div>
-        <div><h3>Machine Learning &amp; Computer Vision Researcher</h3><p class="venue">NYCU / Academia Sinica · Doctoral research fellowship</p><ul><li>Owned end-to-end ML research and development, from problem formulation and algorithm design through implementation, training, optimization, and large-scale evaluation of adaptive video perception systems</li><li>Designed and developed visual perception systems using multimodal learning, self-supervised pretraining, and test-time adaptation to improve robustness and generalization in dynamic environments<ul><li><strong>GOT-Edit:</strong> Developed a multimodal perception framework that integrates 3D geometry (VGGT/DA3) with DINO semantics and uses null-space-constrained online model editing for cross-modal test-time adaptation</li><li><strong>GOT-JEPA:</strong> Extended JEPA to predict tracking models through self-supervised learning, using point tracker adaptation to improve generalization and robustness to occlusion</li><li><strong>PiVOT:</strong> Built an automated visual prompting system that leverages CLIP’s contrastive knowledge for test-time adaptation and target–distractor discrimination in dynamic video environments</li></ul></li><li>Built scalable, memory-efficient ML training pipelines for 20M+ samples using parameter-efficient fine-tuning (PEFT), distributed training, and mixed precision to optimize GPU memory usage and training efficiency</li><li>Achieved state-of-the-art tracking results and evaluated 1M+ samples across 7 benchmarks, analyzing robustness, generalization, and failure modes to guide algorithm development and system optimization</li><li>Published three first-author papers at ICLR 2026 and in leading IEEE Transactions journals as the sole student author, open-sourced <a href="https://chenshihfang.github.io/GOT-EDIT/" target="_blank" rel="noopener">models and code</a>, and discussed research with Academia Sinica and Microsoft AI researchers</li></ul></div>
+        <div><h3>Machine Learning &amp; Computer Vision Researcher</h3><p class="venue">NYCU / Academia Sinica · Doctoral research fellowship</p>
+        <ul>
+          <li>Led ML research and development of adaptive visual perception systems, from problem formulation and algorithm design through implementation, training, optimization, and evaluation, improving visual tracking robustness and generalization in dynamic environments
+          <ul>
+            <li><strong>GOT-Edit:</strong> Designed a multimodal framework that integrates 3D geometry (VGGT/DA3) with DINO semantics through model editing for reliable cross-modal test-time adaptation. Used PEFT to adapt billion-parameter vision models and periodically updated KV caches to reduce inference overhead</li>
+            <li><strong>GOT-JEPA:</strong> Extended JEPA to predict tracking models with self-supervised learning for test-time adaptation to unseen targets. Adapted point tracking for object-aware visibility estimation to improve occlusion robustness</li>
+            <li><strong>PiVOT:</strong> Designed an automated visual prompting framework that uses CLIP’s zero-shot contrastive knowledge for test-time prompt adaptation, improving target–distractor discrimination and tracking robustness in dynamic video</li>
+          </ul>
+          </li>
+          <li>Built scalable ML training pipelines for 20M+ video samples using parameter-efficient fine-tuning (PEFT), distributed training, mixed precision, and activation checkpointing to address GPU memory constraints</li>
+          <li>Achieved state-of-the-art tracking results and evaluated 1M+ samples across 7 benchmarks, demonstrating generalization to seen and unseen targets under challenging dynamic conditions</li>
+          <li>Published three first-author papers at ICLR 2026, IEEE TCSVT 2026, and IEEE TMM 2025 as the sole student author. Open-sourced <a href="https://chenshihfang.github.io/GOT-EDIT/" target="_blank" rel="noopener">models and code</a> and met weekly with academic and Microsoft AI researchers to discuss progress and technical approaches</li>
+        </ul>
+        </div>
       </div>
       <div class="experience-row">
         <div class="experience-date">2020–2021</div>
@@ -280,7 +293,7 @@
       </div>
       <div class="experience-row">
         <div class="experience-date">2018–2020</div>
-        <div><h3>Computer Vision Researcher and Engineer (M.S.)</h3><p class="venue">Yuan Ze University · Master's industry–academia research</p><ul><li>Owned end-to-end vision system development in an industry–academia collaboration, translating industry partner requirements into a research prototype and production-ready system</li><li>Designed and deployed a production vision system for PCB stacked-substrate counting, automating manual inspection, reducing annual operating costs, and contributing to patents</li></ul></div>
+        <div><h3>Computer Vision Researcher and Engineer (M.S.)</h3><p class="venue">Yuan Ze University · Master's industry–academia research</p><ul><li>Owned end-to-end development of an industrial computer vision system in an industry–academia collaboration, translating partner requirements into a research prototype and a production-ready system</li><li>Designed a vision system for PCB stacked-substrate counting using image restoration and segmentation, automating manual inspection, reducing annual operating costs, and contributing to patents</li></ul></div>
       </div>
     </section>
 
@@ -290,10 +303,9 @@
         <li><strong>ML &amp; CV:</strong> Model Architecture Design, Vision Foundation Models, Multimodal Learning, Representation Learning, Self-Supervised Learning, Parameter-Efficient Fine-Tuning (PEFT), Test-Time Adaptation, Model Editing, Knowledge Distillation, KV Caching</li>
         <li><strong>Training &amp; Scaling:</strong> Distributed Training (DP/DDP, DeepSpeed), Activation Checkpointing, Mixed-Precision Training</li>
         <li><strong>Performance &amp; Evaluation:</strong> GPU Memory Optimization, Accuracy &amp; Latency Optimization, Model Benchmarking</li>
-        <li><strong>Frameworks &amp; Tools:</strong> PyTorch, OpenCV</li>
-        <li><strong>Programming:</strong> Python (primary), C++, C</li>
+        <li><strong>Programming &amp; Frameworks:</strong> Python (primary), C++, C, PyTorch, OpenCV</li>
         <li><strong>Systems &amp; Infrastructure:</strong> Linux, Git, HPC GPU Cluster Administration</li>
-        <li><strong>Technical Knowledge:</strong> Quantization, Agent Orchestration</li>
+        <li><strong>Technical Knowledge:</strong> Quantization, Agent Orchestration, Vision-Language Models (VLMs), Vision-Language-Action Models (VLAs), Physical AI</li>
       </ul>
     </section>
 
