@@ -11,7 +11,9 @@ let activeLink = null;
 let closeTimer = null;
 let focusTimer = null;
 let suppressFocusPreview = false;
+
 function cancelClose() { clearTimeout(closeTimer); }
+
 function hidePreview() {
   cancelClose();
   clearTimeout(focusTimer);
@@ -21,6 +23,7 @@ function hidePreview() {
   preview.hidden = true;
   activeLink = null;
 }
+
 function positionPreview(link) {
   const rect = link.getBoundingClientRect();
   const width = preview.offsetWidth;
@@ -31,6 +34,7 @@ function positionPreview(link) {
   preview.style.left = left + 'px';
   preview.style.top = top + 'px';
 }
+
 function showPreview(link) {
   cancelClose();
   if (activeLink === link && !preview.hidden) return;
@@ -58,6 +62,7 @@ function showPreview(link) {
   preview.hidden = false;
   positionPreview(link);
 }
+
 function scheduleClose() {
   cancelClose();
   closeTimer = setTimeout(() => {
@@ -66,6 +71,7 @@ function scheduleClose() {
     hidePreview();
   }, 220);
 }
+
 videoLinks.forEach(link => {
   link.setAttribute('aria-controls', 'video-preview');
   link.setAttribute('aria-expanded', 'false');
@@ -83,9 +89,11 @@ videoLinks.forEach(link => {
   });
   link.addEventListener('blur', scheduleClose);
 });
+
 preview.addEventListener('pointerenter', cancelClose);
 preview.addEventListener('pointerleave', scheduleClose);
 preview.addEventListener('focusout', scheduleClose);
+
 closeButton.addEventListener('click', () => {
   const previousLink = activeLink;
   hidePreview();
@@ -94,16 +102,20 @@ closeButton.addEventListener('click', () => {
   if (previousLink) previousLink.focus({ preventScroll: true });
   suppressFocusPreview = false;
 });
+
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') hidePreview();
 });
+
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) hidePreview();
 });
+
 window.addEventListener('scroll', () => {
   if (!activeLink) return;
   const rect = activeLink.getBoundingClientRect();
   if (rect.bottom < 0 || rect.top > innerHeight) hidePreview();
   else positionPreview(activeLink);
 }, { passive: true });
+
 window.addEventListener('resize', hidePreview);
