@@ -114,7 +114,7 @@
       <div class="eyebrow">Curriculum Vitae</div>
       <h1>Shih-Fang Chen</h1>
       <p class="cv-role">Machine Learning &amp; Computer Vision Researcher and Engineer</p>
-      <p class="cv-summary">Machine learning and computer vision researcher and engineer with a Ph.D. in Computer Science. My research focuses on adaptive video perception, multimodal learning, and foundation model adaptation to improve robustness and generalization in dynamic environments. I published three first-author papers, including one at ICLR 2026 and two in IEEE Transactions journals. I led end-to-end ML R&amp;D across pretraining, fine-tuning, optimization, and evaluation, deployed production vision systems, and contributed to patented technologies.</p>
+      <p class="cv-summary">Machine learning and computer vision researcher and engineer with a Ph.D. in Computer Science, specializing in adaptive visual/video perception to improve model robustness and generalization in complex and dynamic environments. My expertise spans multimodal learning, foundation model adaptation, and test-time adaptation. I published first-author papers at ICLR and in IEEE TCSVT and IEEE TMM. My experience includes ML model development, pretraining, fine-tuning, optimization, and evaluation, along with industry collaboration on vision algorithms for production deployment and patented technologies.</p>
       <p class="cv-summary">Currently seeking opportunities in Machine Learning, Computer Vision, and AI, including Research Scientist, Applied Scientist, and ML/CV Engineering roles. Interested in technically challenging AI problems with strong research depth and real-world impact.</p>
       <div class="cv-links"><a href="mailto:shihfang1207@gmail.com">shihfang1207@gmail.com</a><a href="mailto:csf.cs09@nycu.edu.tw">csf.cs09@nycu.edu.tw</a><a href="https://www.linkedin.com/in/shihfangchen/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/chenshihfang" target="_blank" rel="noopener">GitHub</a><a href="https://scholar.google.com/citations?user=X8uMo8EAAAAJ" target="_blank" rel="noopener">Google Scholar</a><a href="https://orcid.org/0000-0002-8438-400X" target="_blank" rel="noopener">ORCID</a></div>
     </header>
@@ -205,50 +205,25 @@
           <h3>Machine Learning &amp; Computer Vision Researcher</h3>
           <p class="venue">NYCU / Academia Sinica · Ph.D. research fellowship</p>
           <ul>
-            <li>
-              Led ML research and development of visual perception systems, identifying and addressing challenges in adapting visual tracking models to complex and dynamic environments through innovative solutions that improve model robustness, generalization, and adaptability
+            <li>Led ML R&amp;D of visual/video perception systems, identifying and addressing key visual tracking challenges to improve model robustness, generalization, and adaptability in complex, dynamic environments
               <ul>
-                <li>
-                  <strong>GOT-Edit:</strong>
-                  Designed a novel multimodal learning framework enabling
-                  <strong>safer and more reliable cross-modal test-time adaptation of
-                  video perception models to enhance spatial intelligence and adaptability
-                  in complex and dynamic environments</strong> via an innovative
-                  <strong>test-time model editing approach</strong> that integrates
-                  <strong>3D visual geometry (VGGT/DA3) and 2D semantics (DINO)</strong>
-                </li>
-                <li>
-                  <strong>GOT-JEPA:</strong>
-                  Designed a <strong>self-supervised pretraining framework</strong> that
-                  extends JEPA to predict neural network parameters for
-                  <strong>test-time model adaptation</strong>, improving
-                  <strong>generalization to unseen targets and dynamic environments</strong>;
-                  incorporated <strong>point tracking</strong> to support
-                  <strong>object-level adaptation</strong> and improve
-                  <strong>long-term visual tracking robustness</strong> under occlusions
-                </li>
-                <li>
-                  <strong>PiVOT:</strong>
-                  Designed an <strong>automated visual prompting framework for adaptive
-                  target–distractor discrimination at test time</strong>, enabling
-                  <strong>cross-model collaboration</strong> between <strong>CLIP</strong>
-                  and the tracker to dynamically leverage zero-shot contrastive knowledge
-                  for robust tracking in dynamic environments
-                </li>
+                <li><strong>GOT-Edit:</strong> Designed a multimodal learning framework for safer and more reliable cross-modal test-time adaptation of video perception models through test-time model editing, integrating 3D visual geometry (VGGT/DA3) with 2D semantics (DINO) to enhance spatial intelligence and adaptability</li>
+                <li><strong>GOT-JEPA:</strong> Developed a self-supervised pretraining framework extending JEPA to predict model parameters for test-time adaptation, improving generalization to unseen targets and environments. Used point tracking for pixel-to-object-level visibility reasoning to improve long-term tracking under occlusion</li>
+                <li><strong>PiVOT:</strong> Designed an automated visual prompting framework for adaptive target–distractor discrimination at test time, enabling cross-model collaboration between CLIP and the tracker to use zero-shot contrastive knowledge for robust tracking in dynamic environments</li>
               </ul>
             </li>
-            <li>Built and optimized scalable ML training pipelines processing 20M+ video samples and supporting million- to billion-parameter vision models, addressing GPU memory and computational constraints through efficient model architecture design, DDP/DeepSpeed, mixed precision, and activation checkpointing; leveraged PEFT for parameter- and memory-efficient model adaptation and KV caching with periodic updates to reduce computational overhead</li>
-            <li>Consistently achieved SOTA tracking performance against leading methods on highly competitive benchmarks, demonstrating high tracking accuracy and strong generalization to unseen targets and environments; validated on 1M+ samples across 7 benchmarks under diverse visual conditions</li>
-            <li>Published three first-author papers in top-tier ML/CV venues as the sole student author; open-sourced <a href="https://chenshihfang.github.io/GOT-EDIT/" target="_blank" rel="noopener">models and code</a>; drove weekly technical discussions with researchers from academia and industry (Microsoft AI) to discuss experimental findings and refine research approaches</li>
+            <li>Built and optimized ML training pipelines for 20M+ video samples and million- to billion-parameter vision models. Improved training and inference efficiency through architecture design, DDP/DeepSpeed, mixed precision, activation checkpointing, PEFT, and periodic KV cache updates</li>
+            <li>Consistently achieved state-of-the-art tracking performance and strong generalization to unseen and complex environments across studies, validated on 1M+ samples across 7 benchmarks under diverse visual conditions</li>
+            <li>Published three first-author papers at ICLR 2026, IEEE TCSVT 2026, and IEEE TMM 2025 as the sole student author. Open-sourced <a href="https://chenshihfang.github.io/GOT-EDIT/" target="_blank" rel="noopener">models and code</a> and drove weekly technical discussions with academic and Microsoft AI researchers to review experimental findings and refine research approaches</li>
           </ul>
         </div>
         <div class="cv-date">2021–2026</div>
       </article>
 
       <article class="cv-entry"><div><h3>HPC GPU System Administrator</h3><p class="venue">Vision and Learning Lab (VLLAB), NYCU and Academia Sinica</p><p>Administered 10 GPU servers supporting 30 users, overseeing deployment and operations while coordinating shared compute resources across researchers and concurrent lab projects.</p></div><div class="cv-date">2021–2026</div></article>
-      <article class="cv-entry"><div><h3>Machine Learning &amp; CV Researcher (Full-time RA)</h3><p class="venue">Department of Electrical Engineering, Yuan Ze University · Full-time</p><ul><li>Led end-to-end development of real-time vision applications as the sole vision-system developer, including 3D interaction, pose training, pitching analysis, and banknote reconstruction</li><li>Built and deployed NVIDIA edge AI systems for depth and pose estimation, motion analysis, and image reconstruction. Delivered solutions to industry partners and contributed to patents and research publications</li></ul><div class="paper-links"><a href="https://www.youtube.com/watch?v=kdRU8egUox8" target="_blank" rel="noopener" data-youtube-id="kdRU8egUox8" data-preview-title="3D interaction demo">3D interaction demo</a><a href="https://www.youtube.com/watch?v=kojM4Ia8sjE" target="_blank" rel="noopener" data-youtube-id="kojM4Ia8sjE" data-preview-title="Pitching analysis demo">Pitching analysis demo</a><a href="https://youtu.be/1uSJjntqjGU" target="_blank" rel="noopener" data-youtube-id="1uSJjntqjGU" data-preview-title="Pose training demo">Pose training demo</a><a href="https://www.youtube.com/watch?v=BQn4OWszxgs" target="_blank" rel="noopener" data-youtube-id="BQn4OWszxgs" data-preview-title="Banknote reconstruction demo">Banknote reconstruction demo</a></div></div><div class="cv-date">2020–2021</div></article>
+      <article class="cv-entry"><div><h3>Machine Learning &amp; CV Researcher (Full-time RA)</h3><p class="venue">Department of Electrical Engineering, Yuan Ze University · Full-time</p><ul><li>Led the development of computer vision algorithms for edge AI systems as the sole vision-system developer, with applications including 3D interaction, pose estimation, and motion analysis. Delivered vision solutions to industry partners and contributed to research publications</li></ul><div class="paper-links"><a href="https://www.youtube.com/watch?v=kdRU8egUox8" target="_blank" rel="noopener" data-youtube-id="kdRU8egUox8" data-preview-title="3D interaction demo">3D interaction demo</a><a href="https://www.youtube.com/watch?v=kojM4Ia8sjE" target="_blank" rel="noopener" data-youtube-id="kojM4Ia8sjE" data-preview-title="Pitching analysis demo">Pitching analysis demo</a><a href="https://youtu.be/1uSJjntqjGU" target="_blank" rel="noopener" data-youtube-id="1uSJjntqjGU" data-preview-title="Pose training demo">Pose training demo</a><a href="https://www.youtube.com/watch?v=BQn4OWszxgs" target="_blank" rel="noopener" data-youtube-id="BQn4OWszxgs" data-preview-title="Banknote reconstruction demo">Banknote reconstruction demo</a></div></div><div class="cv-date">2020–2021</div></article>
       <article class="cv-entry"><div><h3>Computer Vision Researcher and Engineer (M.S.)</h3><p class="venue">Department of Computer Science, Yuan Ze University · M.S. industry–academia research</p><ul><li>Owned end-to-end development of an industrial computer vision system in an industry–academia collaboration, translating partner requirements into a research prototype and a production-ready system</li><li>Designed a vision system for PCB stacked-substrate counting using image restoration and segmentation, automating manual inspection, reducing annual operating costs, and contributing to patents</li></ul><div class="paper-links"><a href="https://www.youtube.com/watch?v=T8Et8sdLTKc" target="_blank" rel="noopener" data-youtube-id="T8Et8sdLTKc" data-preview-title="Industrial system demo">Industrial system demo</a></div></div><div class="cv-date">2018–2020</div></article>
-      <article class="cv-entry"><div><h3>Computer Vision Project Lead &amp; Developer</h3><p class="venue">Department of Computer Science, Chaoyang University of Technology</p><p>Led an undergraduate team to develop a vision-based autonomous drone for disaster monitoring, receiving a Bronze Award at the Ministry of Education Creative Software Applications Contest.</p></div><div class="cv-date">2013–2017</div></article>
+      <article class="cv-entry"><div><h3>Computer Vision Project Lead &amp; Developer</h3><p class="venue">Department of Computer Science, Chaoyang University of Technology</p><p>Led a student team to develop a vision-based autonomous drone for disaster monitoring, earning a Bronze Award and an Honorable Mention at Taiwan’s Ministry of Education Creative Software Applications Contest.</p></div><div class="cv-date">2013–2017</div></article>
       <article class="cv-entry"><div><h3>Team Lead &amp; Programmer, Autonomous Robotics</h3><p class="venue">National LoTung Industrial Vocational High School</p><p>Led a student team to develop an autonomous robot and its perception and decision logic, earning first place at the World Robot Olympiad Taipei regional competition.</p></div><div class="cv-date">2011–2013</div></article>
       <article class="cv-entry"><div><h3>Engineering Assistant (Full-Time Summer Intern)</h3><p class="venue">National Center for Traditional Arts</p><p>Collaborated with senior colleagues on engineering activities, gaining experience in a professional environment.</p></div><div class="cv-date">2016</div></article>
     </section>
@@ -257,11 +232,9 @@
       <h2 id="skills-title">Research Interests &amp; Technical Skills</h2>
       <div class="skill-row"><div class="skill-label">Research Interests</div><p>Visual/Video Perception, Multimodal AI, Video Understanding, Spatial Intelligence, Foundation Model Adaptation, Model Training and Optimization, Test-Time Adaptation, World Models</p></div>
       <div class="skill-row"><div class="skill-label">ML &amp; CV</div><p>Model Architecture Design, Vision Foundation Models, Multimodal Learning, Representation Learning, Self-Supervised Learning, Parameter-Efficient Fine-Tuning (PEFT), Test-Time Adaptation, Model Editing, Knowledge Distillation, KV Caching</p></div>
-      <div class="skill-row"><div class="skill-label">Training &amp; Scaling</div><p>Distributed Training (DP/DDP, DeepSpeed), Activation Checkpointing, Mixed-Precision Training</p></div>
       <div class="skill-row"><div class="skill-label">Performance &amp; Evaluation</div><p>GPU Memory Optimization, Accuracy &amp; Latency Optimization, Model Benchmarking</p></div>
       <div class="skill-row"><div class="skill-label">Programming &amp; Frameworks</div><p>Python (primary), C++, C, PyTorch, OpenCV</p></div>
-      <div class="skill-row"><div class="skill-label">Systems &amp; Infrastructure</div><p>Linux, Git, HPC GPU Cluster Administration</p></div>
-      <div class="skill-row"><div class="skill-label">Technical Knowledge</div><p>Quantization, Agent Orchestration, Vision-Language Models (VLMs), Vision-Language-Action Models (VLAs), Physical AI</p></div>
+      <div class="skill-row"><div class="skill-label">Technical Knowledge</div><p>Quantization, Agent Orchestration, Vision-Language Models (VLMs)</p></div>
     </section>
 
     <section id="honors" class="cv-section" aria-labelledby="honors-title">
@@ -283,7 +256,7 @@
 
     <section id="education" class="cv-section" aria-labelledby="education-title">
       <h2 id="education-title">Education</h2>
-      <article class="cv-entry"><div><h3>National Yang Ming Chiao Tung University</h3><p>Ph.D. in Computer Science</p><p class="venue">Coursework GPA: 4.24 / 4.3 · Dissertation GPA: 4.3 / 4.3</p><ul><li>Published three first-author papers at ICLR 2026 and in leading IEEE Transactions journals</li><li>Ph.D. Fellowships from Academia Sinica (2022–2026) and Foxconn–NYCU Joint Research Center (2021–2022)</li><li>Doctoral Dissertation Award, Honorable Mention, Taiwanese Association for Artificial Intelligence (2026)</li><li>Research Scholarship, CTCI Foundation (2026)</li><li>Dissertation: Rethinking Generic Object Tracking Toward Human-Level Perceptual Intelligence</li><li>Advisor: Yen-Yu Lin (NYCU). Co-advisors: Jun-Cheng Chen (Academia Sinica), I-Hong Jhuo (Microsoft AI)</li></ul><div class="paper-links"><a href="../#research-talk">Research slides</a></div></div><div class="cv-date">2021–2026</div></article>
+      <article class="cv-entry"><div><h3>National Yang Ming Chiao Tung University</h3><p>Ph.D. in Computer Science</p><p class="venue">Coursework GPA: 4.24 / 4.3 · Dissertation GPA: 4.3 / 4.3</p><ul><li>Published three first-author papers at ICLR 2026 and in leading IEEE Transactions journals</li><li>Ph.D. Fellowships from Academia Sinica (2022–2026) and Foxconn–NYCU Joint Research Center (2021–2022)</li><li>Doctoral Dissertation Award, Honorable Mention, Taiwanese Association for Artificial Intelligence (2026)</li><li>Research Scholarship, CTCI Foundation (2026)</li><li>Outstanding Students Conference Travel Grant, Foundation for the Advancement of Outstanding Scholarship (2026)</li><li>Dissertation: Rethinking Generic Object Tracking Toward Human-Level Perceptual Intelligence</li><li>Advisor: Yen-Yu Lin (NYCU). Co-advisors: Jun-Cheng Chen (Academia Sinica), I-Hong Jhuo (Microsoft AI)</li></ul><div class="paper-links"><a href="../#research-talk">Research slides</a></div></div><div class="cv-date">2021–2026</div></article>
       <article class="cv-entry"><div><h3>Yuan Ze University</h3><p>M.S. in Computer Science</p><p class="venue">GPA: 4.0 / 4.0</p><ul><li>Developed and deployed a patented production vision system in an industry–academia collaboration, automating manual inspection and reducing annual operating costs</li><li>Ranked first in the graduating class and inducted into the Phi Tau Phi Honor Society</li><li>Advisor: Ting-Ying Chien</li></ul></div><div class="cv-date">2018–2020</div></article>
       <article class="cv-entry">
         <div>
@@ -291,8 +264,8 @@
           <p>B.S. in Computer Science</p>
           <p class="venue">First place in the Computer Science project competition</p>
           <ul>
-            <li>Led the development of a <strong>vision-based autonomous drone</strong> for disaster monitoring, earning a Bronze Award at Taiwan’s Ministry of Education Creative Software Applications Contest and presenting the work at the AIT 2017 conference</li>
-            <li>Ranked in the <strong>top 6% of the graduating class</strong> and was the sole school-wide recipient of the <strong>Taichung City Government Honors Student Award</strong></li>
+            <li>Led the development of a <strong>vision-based autonomous drone</strong> for disaster monitoring, earning a Bronze Award and an Honorable Mention at Taiwan’s Ministry of Education Creative Software Applications Contest and presenting the work at the AIT 2017 conference</li>
+            <li>Ranked in the <strong>top 6% of the graduating class</strong> and was the sole university-wide recipient of the <strong>Taichung City Government Honors Student Award</strong></li>
             <li>Received a <strong>fully funded scholarship</strong> for an academic exchange in Australia</li>
             <li>Later led a 17-member team across departments in a university-wide exhibition</li>
           </ul>
