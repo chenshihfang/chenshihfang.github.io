@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/fonts.css">
-  <link rel="stylesheet" href="styles.css?v=paper-videos-1">
-  <script src="site.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=paper-videos-2">
+  <script src="site.js?v=video-lightbox-1" defer></script>
   <!-- BEGIN SEARCH METADATA -->
   <title>Shih-Fang Chen | Computer Vision &amp; Machine Learning Researcher</title>
   <meta name="description" content="Shih-Fang Chen, Ph.D. Computer vision and machine learning research in multimodal learning, spatial intelligence, object tracking, visual perception and test-time adaptation. GOT-Edit, GOT-JEPA, and PiVOT. ICLR.">
@@ -188,7 +188,7 @@
       </div>
 
       <article class="publication">
-        <button class="publication-image" type="button" data-full-image="assets/got-edit-full.webp" data-image-title="GOT-Edit" aria-label="Enlarge GOT-Edit figure" aria-haspopup="dialog">
+        <button class="publication-image" type="button" data-full-video="assets/got-edit-method.mp4" data-video-title="GOT-Edit" aria-label="Enlarge GOT-Edit video" aria-haspopup="dialog">
           <video autoplay muted loop playsinline preload="auto" poster="assets/got-edit.webp" aria-label="GOT-Edit method animation">
             <source src="assets/got-edit-method.mp4" type="video/mp4">
             <img src="assets/got-edit.webp" alt="GOT-Edit geometry and semantics framework" width="1400" height="519">
@@ -216,7 +216,7 @@
       </article>
 
       <article class="publication">
-        <button class="publication-image" type="button" data-full-image="assets/got-jepa-full.webp" data-image-title="GOT-JEPA" aria-label="Enlarge GOT-JEPA figure" aria-haspopup="dialog">
+        <button class="publication-image" type="button" data-full-video="assets/got-jepa-method.mp4" data-video-title="GOT-JEPA" aria-label="Enlarge GOT-JEPA video" aria-haspopup="dialog">
           <video autoplay muted loop playsinline preload="auto" poster="assets/got-jepa.webp" aria-label="GOT-JEPA method animation">
             <source src="assets/got-jepa-method.mp4" type="video/mp4">
             <img src="assets/got-jepa.webp" alt="GOT-JEPA model-predictive learning and OccuSolver point visibility reasoning" width="1035" height="1000">
@@ -244,7 +244,7 @@
       </article>
 
       <article class="publication">
-        <button class="publication-image" type="button" data-full-image="assets/pivot-full.webp" data-image-title="PiVOT" aria-label="Enlarge PiVOT figure" aria-haspopup="dialog">
+        <button class="publication-image" type="button" data-full-video="assets/pivot-method.mp4" data-video-title="PiVOT" aria-label="Enlarge PiVOT video" aria-haspopup="dialog">
           <video autoplay muted loop playsinline preload="auto" poster="assets/pivot.webp" aria-label="PiVOT method animation">
             <source src="assets/pivot-method.mp4" type="video/mp4">
             <img src="assets/pivot.webp" alt="PiVOT generates and refines visual prompts using CLIP to distinguish the target from distractors" width="1400" height="778">
@@ -358,12 +358,15 @@
     </section>
   </main>
 
-  <dialog id="image-lightbox" class="image-lightbox" aria-labelledby="lightbox-title">
+  <dialog id="video-lightbox" class="video-lightbox" aria-labelledby="lightbox-title">
     <div class="lightbox-toolbar">
-      <h2 id="lightbox-title">Research figure</h2>
-      <div class="lightbox-actions"><button id="lightbox-zoom" type="button" aria-pressed="false">Zoom in</button><button id="lightbox-close" type="button" aria-label="Close enlarged figure">Close ×</button></div>
+      <h2 id="lightbox-title">Research video</h2>
+      <div class="lightbox-actions"><button id="lightbox-close" type="button" aria-label="Close enlarged video">Close ×</button></div>
     </div>
-    <div class="lightbox-viewport"><img id="lightbox-image" alt="Enlarged research figure" hidden><p id="lightbox-status" role="status"></p></div>
+    <div class="lightbox-viewport">
+      <video id="lightbox-video" autoplay muted loop playsinline controls preload="metadata" aria-label="Enlarged research video"></video>
+      <p id="lightbox-status" role="status"></p>
+    </div>
   </dialog>
 
   <footer class="site-footer container">
