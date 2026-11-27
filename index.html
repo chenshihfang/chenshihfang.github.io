@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/fonts.css">
-  <link rel="stylesheet" href="styles.css?v=video-quality-1">
-  <script src="site.js?v=video-quality-1" defer></script>
+  <link rel="stylesheet" href="styles.css?v=video-updates-2">
+  <script src="site.js?v=video-updates-2" defer></script>
   <!-- BEGIN SEARCH METADATA -->
   <title>Shih-Fang Chen | Computer Vision &amp; Machine Learning Researcher</title>
   <meta name="description" content="Shih-Fang Chen, Ph.D. Computer vision and machine learning research in multimodal learning, spatial intelligence, object tracking, visual perception and test-time adaptation. GOT-Edit, GOT-JEPA, and PiVOT. ICLR.">
@@ -166,13 +166,16 @@
         <h2 id="highlights-title">Doctoral Research</h2>
         <p>Human visual perception lies in the ability to maintain a continuous and coherent understanding of the external world by integrating observations with accumulated experience. The human visual system continuously adapts to changes in targets and environments by leveraging prior knowledge, spatial geometry, and semantic context. As a core problem in computer vision, visual object tracking aims to bring machine perception closer to human visual perception.</p>
         <div class="doctoral-research">
-          <a class="slides-cover" href="#research-talk" aria-label="Browse my research slides on this page">
-            <video data-preview-base="assets/doctoral-research-teaser" autoplay muted loop playsinline preload="auto" poster="assets/research-slides.webp" aria-label="Doctoral research demo teaser">
-              <source src="assets/doctoral-research-teaser-preview-480.mp4" type="video/mp4">
-              <img src="assets/research-slides.webp" alt="Doctoral dissertation: Rethinking Generic Object Tracking Toward Human-Level Perceptual Intelligence" width="1000" height="562" loading="lazy">
+          <div class="slides-cover research-teaser">
+            <video id="doctoral-research-video" data-video-version="311631ba9823" data-preview-base="assets/doctoral-research-teaser" autoplay muted loop playsinline preload="auto" poster="assets/doctoral-research-teaser-poster.webp?v=311631ba9823" aria-label="Doctoral research demo teaser">
+              <source src="assets/doctoral-research-teaser-preview-480.mp4?v=311631ba9823" type="video/mp4">
+              <img src="assets/doctoral-research-teaser-poster.webp?v=311631ba9823" alt="Doctoral dissertation: Rethinking Generic Object Tracking Toward Human-Level Perceptual Intelligence" width="1280" height="720" loading="lazy">
             </video>
-            <span class="cover-action"><svg class="icon"><use href="#icon-file"/></svg>Browse slides</span>
-          </a>
+            <div class="research-cover-actions">
+              <a class="cover-action" href="#research-talk" aria-label="Browse my research slides on this page"><svg class="icon"><use href="#icon-file"/></svg>Browse slides</a>
+              <button class="cover-action" type="button" data-full-video="assets/doctoral-research-teaser.mp4?v=311631ba9823" data-video-title="Doctoral Research" data-preview-selector="#doctoral-research-video" aria-label="Enlarge doctoral research video" aria-haspopup="dialog">Enlarge &#8599;</button>
+            </div>
+          </div>
           <p>Generic Object Tracking (GOT) aims to continuously localize an arbitrarily specified target in dynamic visual streams. However, unpredictable target and environmental variations make generalization and test-time adaptation key bottlenecks, particularly under severe deformation, complex distractors, environmental changes, and unseen target categories.</p>
         </div>
         <p class="doctoral-research-conclusion">This dissertation aims to narrow the gap between machine visual tracking and human visual perception by proposing a series of ML methods that systematically enhance target discrimination, robust adaptation, and geometric reasoning capabilities.</p>
@@ -191,10 +194,10 @@
       </div>
 
       <article class="publication">
-        <button class="publication-image" type="button" data-full-video="assets/got-edit-method.mp4" data-video-title="GOT-Edit" aria-label="Enlarge GOT-Edit video" aria-haspopup="dialog">
-          <video data-preview-base="assets/got-edit-method" autoplay muted loop playsinline preload="auto" poster="assets/got-edit.webp" aria-label="GOT-Edit method animation">
-            <source src="assets/got-edit-method-preview-480.mp4" type="video/mp4">
-            <img src="assets/got-edit.webp" alt="GOT-Edit geometry and semantics framework" width="1400" height="519">
+        <button class="publication-image" type="button" data-full-video="assets/got-edit-method.mp4?v=742c02502331" data-video-title="GOT-Edit" aria-label="Enlarge GOT-Edit video" aria-haspopup="dialog">
+          <video data-video-version="742c02502331" data-preview-base="assets/got-edit-method" autoplay muted loop playsinline preload="auto" poster="assets/got-edit-method-poster.webp?v=742c02502331" aria-label="GOT-Edit method animation">
+            <source src="assets/got-edit-method-preview-480.mp4?v=742c02502331" type="video/mp4">
+            <img src="assets/got-edit-method-poster.webp?v=742c02502331" alt="GOT-Edit geometry and semantics framework" width="1280" height="720">
           </video>
           <span class="image-hint">Enlarge ↗</span>
         </button>
@@ -219,10 +222,10 @@
       </article>
 
       <article class="publication">
-        <button class="publication-image" type="button" data-full-video="assets/got-jepa-method.mp4" data-video-title="GOT-JEPA" aria-label="Enlarge GOT-JEPA video" aria-haspopup="dialog">
-          <video data-preview-base="assets/got-jepa-method" autoplay muted loop playsinline preload="auto" poster="assets/got-jepa.webp" aria-label="GOT-JEPA method animation">
-            <source src="assets/got-jepa-method-preview-480.mp4" type="video/mp4">
-            <img src="assets/got-jepa.webp" alt="GOT-JEPA model-predictive learning and OccuSolver point visibility reasoning" width="1035" height="1000">
+        <button class="publication-image" type="button" data-full-video="assets/got-jepa-method.mp4?v=1dab93d1f080" data-video-title="GOT-JEPA" aria-label="Enlarge GOT-JEPA video" aria-haspopup="dialog">
+          <video data-video-version="1dab93d1f080" data-preview-base="assets/got-jepa-method" autoplay muted loop playsinline preload="auto" poster="assets/got-jepa-method-poster.webp?v=1dab93d1f080" aria-label="GOT-JEPA method animation">
+            <source src="assets/got-jepa-method-preview-480.mp4?v=1dab93d1f080" type="video/mp4">
+            <img src="assets/got-jepa-method-poster.webp?v=1dab93d1f080" alt="GOT-JEPA model-predictive learning and OccuSolver point visibility reasoning" width="1280" height="720">
           </video>
           <span class="image-hint">Enlarge ↗</span>
         </button>
@@ -247,10 +250,10 @@
       </article>
 
       <article class="publication">
-        <button class="publication-image" type="button" data-full-video="assets/pivot-method.mp4" data-video-title="PiVOT" aria-label="Enlarge PiVOT video" aria-haspopup="dialog">
-          <video data-preview-base="assets/pivot-method" autoplay muted loop playsinline preload="auto" poster="assets/pivot.webp" aria-label="PiVOT method animation">
-            <source src="assets/pivot-method-preview-480.mp4" type="video/mp4">
-            <img src="assets/pivot.webp" alt="PiVOT generates and refines visual prompts using CLIP to distinguish the target from distractors" width="1400" height="778">
+        <button class="publication-image" type="button" data-full-video="assets/pivot-method.mp4?v=2a0bd81d8e67" data-video-title="PiVOT" aria-label="Enlarge PiVOT video" aria-haspopup="dialog">
+          <video data-video-version="2a0bd81d8e67" data-preview-base="assets/pivot-method" autoplay muted loop playsinline preload="auto" poster="assets/pivot-method-poster.webp?v=2a0bd81d8e67" aria-label="PiVOT method animation">
+            <source src="assets/pivot-method-preview-480.mp4?v=2a0bd81d8e67" type="video/mp4">
+            <img src="assets/pivot-method-poster.webp?v=2a0bd81d8e67" alt="PiVOT generates and refines visual prompts using CLIP to distinguish the target from distractors" width="1280" height="720">
           </video>
           <span class="image-hint">Enlarge ↗</span>
         </button>

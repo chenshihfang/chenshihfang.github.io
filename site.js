@@ -1,7 +1,7 @@
 'use strict';
 
 // Pre-filter previews for the actual screen density instead of downscaling
-// the full 1080p video with the browser's fast texture sampler.
+// the full-resolution video with the browser's fast texture sampler.
 const previewWidths = [384, 480, 640, 800, 960, 1280, 1920];
 const previewVideos = [...document.querySelectorAll('video[data-preview-base]')];
 function refreshPreviewSources() {
@@ -13,10 +13,11 @@ function refreshPreviewSources() {
     const width = rect.width - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
     const height = rect.height - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);
     const pixels = Math.min(width, height * 16 / 9) * (window.devicePixelRatio || 1);
-    const selectedWidth = previewWidths.find(size => size >= pixels) || 1920;
+    const selectedWidth = previewWidths.find(size => size >= pixels);
     const base = video.dataset.previewBase;
-    const source = selectedWidth === 1920 ? base + '.mp4' : base + '-preview-' + selectedWidth + '.mp4';
-    video.dataset.previewWidth = selectedWidth;
+    const revision = video.dataset.videoVersion ? '?v=' + encodeURIComponent(video.dataset.videoVersion) : '';
+    const source = (selectedWidth ? base + '-preview-' + selectedWidth + '.mp4' : base + '.mp4') + revision;
+    video.dataset.previewWidth = selectedWidth || 'original';
     const currentSource = video.getAttribute('src') || video.querySelector('source')?.getAttribute('src');
     if (currentSource === source) return;
     const position = video.currentTime;
@@ -37,7 +38,8 @@ previewVideos.forEach(video => {
   const useOriginal = () => {
     if (video.dataset.previewFallback === 'true') return;
     video.dataset.previewFallback = 'true';
-    video.src = video.dataset.previewBase + '.mp4';
+    const revision = video.dataset.videoVersion ? '?v=' + encodeURIComponent(video.dataset.videoVersion) : '';
+    video.src = video.dataset.previewBase + '.mp4' + revision;
     video.load();
     video.play().catch(() => {});
   };
@@ -56,12 +58,12 @@ const lightbox = document.querySelector('#video-lightbox');
 const enlargedVideo = document.querySelector('#lightbox-video');
 const videoStatus = document.querySelector('#lightbox-status');
 let videoTrigger = null;
-document.querySelectorAll('.publication-image[data-full-video]').forEach(button => {
+document.querySelectorAll('[data-full-video]').forEach(button => {
   button.addEventListener('click', () => {
     videoTrigger = button;
-    const preview = button.querySelector('video');
+    const preview = button.dataset.previewSelector ? document.querySelector(button.dataset.previewSelector) : button.querySelector('video');
     document.querySelector('#lightbox-title').textContent = button.dataset.videoTitle;
-    enlargedVideo.setAttribute('aria-label', button.dataset.videoTitle + ' method animation');
+    enlargedVideo.setAttribute('aria-label', button.dataset.videoTitle + ' video');
     enlargedVideo.poster = preview.poster;
     enlargedVideo.src = button.dataset.fullVideo;
     enlargedVideo.muted = true;
