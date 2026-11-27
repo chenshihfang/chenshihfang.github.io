@@ -1,5 +1,56 @@
 'use strict';
 
+// Pre-filter previews for the actual screen density instead of downscaling
+// the full 1080p video with the browser's fast texture sampler.
+const previewWidths = [384, 480, 640, 800, 960, 1280, 1920];
+const previewVideos = [...document.querySelectorAll('video[data-preview-base]')];
+function refreshPreviewSources() {
+  previewVideos.forEach(video => {
+    if (video.dataset.previewFallback === 'true') return;
+    const rect = video.getBoundingClientRect();
+    if (!rect.width || !rect.height) return;
+    const style = getComputedStyle(video);
+    const width = rect.width - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+    const height = rect.height - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);
+    const pixels = Math.min(width, height * 16 / 9) * (window.devicePixelRatio || 1);
+    const selectedWidth = previewWidths.find(size => size >= pixels) || 1920;
+    const base = video.dataset.previewBase;
+    const source = selectedWidth === 1920 ? base + '.mp4' : base + '-preview-' + selectedWidth + '.mp4';
+    video.dataset.previewWidth = selectedWidth;
+    const currentSource = video.getAttribute('src') || video.querySelector('source')?.getAttribute('src');
+    if (currentSource === source) return;
+    const position = video.currentTime;
+    video.addEventListener('loadedmetadata', () => {
+      if (position && Number.isFinite(video.duration)) video.currentTime = Math.min(position, video.duration - 0.01);
+    }, { once: true });
+    video.src = source;
+    video.load();
+    video.play().catch(() => {});
+  });
+}
+let previewResizeTimer;
+function schedulePreviewRefresh() {
+  clearTimeout(previewResizeTimer);
+  previewResizeTimer = setTimeout(refreshPreviewSources, 150);
+}
+previewVideos.forEach(video => {
+  const useOriginal = () => {
+    if (video.dataset.previewFallback === 'true') return;
+    video.dataset.previewFallback = 'true';
+    video.src = video.dataset.previewBase + '.mp4';
+    video.load();
+    video.play().catch(() => {});
+  };
+  video.addEventListener('error', useOriginal);
+  video.querySelector('source')?.addEventListener('error', useOriginal);
+});
+if (typeof ResizeObserver !== 'undefined') {
+  const previewObserver = new ResizeObserver(schedulePreviewRefresh);
+  previewVideos.forEach(video => previewObserver.observe(video));
+}
+window.addEventListener('resize', schedulePreviewRefresh);
+refreshPreviewSources();
+
 // Native dialog contains focus and supports Escape to close.
 const lightbox = document.querySelector('#video-lightbox');
 const enlargedVideo = document.querySelector('#lightbox-video');
